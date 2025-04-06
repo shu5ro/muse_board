@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { motion, AnimatePresence } from "framer-motion";
+import cloudflareLoader from '../imageLoader';
 
 
 type Prompt = {
@@ -97,7 +98,14 @@ export default function PromptBoard() {
   return (
     <div className="p-4">
       <header className="fixed top-0 left-0 w-full h-16 bg-background z-10 p-2 flex items-center justify-center">
-        <Image src="/logo.png" alt="logo" width={52} height={52} className="rounded-full"/>
+        <Image
+          loader={cloudflareLoader}
+          src="/logo.png"
+          alt="logo"
+          width={52}
+          height={52}
+          className="rounded-full"
+        />
       </header>
       <div className="mt-16 mb-4">
         <input
@@ -151,6 +159,7 @@ export default function PromptBoard() {
             className="relative group rounded-3xl overflow-hidden break-inside-avoid"
           >
             <Image
+              loader={cloudflareLoader}
               src={prompt.image}
               alt={prompt.category.join(", ")}
               width={600}
