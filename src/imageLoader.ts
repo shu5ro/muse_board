@@ -12,5 +12,5 @@ export default function cloudflareLoader({
     params.push(`quality=${quality}`);
   }
   const paramsString = params.join(',');
-  return `https://muse-board.pages.dev/cdn-cgi/image/${paramsString}/${src}`;
-} 
+  return `https://your-cloudflare-domain.com/cdn-cgi/image/${paramsString}/${src}`;
+}

@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     loader: 'custom',
-    loaderFile: './imageLoader.js',
+    loaderFile: './src/imageLoader.ts',
     domains: ["source.unsplash.com", "pbs.twimg.com", "waujtfrtdrmkrnnsnvtb.supabase.co"],
   },
 };
