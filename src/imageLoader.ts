@@ -5,8 +5,8 @@ const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
   if (src.startsWith('http')) {
     return src;
   }
-  // 相対パスの場合はCloudflare PagesのURLに変換
-  return `https://muse-board.pages.dev/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
+  // 相対パスの場合は直接パスを返す
+  return src;
 };
 
 export default cloudflareLoader;

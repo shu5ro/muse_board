@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
   output: `export`,
   reactStrictMode: true,
   images: {
-    loader: 'custom',
-    loaderFile: './src/imageLoader.ts',
+    unoptimized: true,
     domains: [
       "source.unsplash.com",
       "pbs.twimg.com",
