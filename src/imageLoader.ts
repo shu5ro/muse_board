@@ -1,6 +1,6 @@
 import { ImageLoader } from 'next/image';
 
-const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
+const cloudflareLoader: ImageLoader = ({ src }) => {
   // 絶対URLの場合はそのまま返す
   if (src.startsWith('http')) {
     return src;
