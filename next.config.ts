@@ -7,7 +7,12 @@ const nextConfig: NextConfig = {
   images: {
     loader: 'custom',
     loaderFile: './src/imageLoader.ts',
-    domains: ["source.unsplash.com", "pbs.twimg.com", "waujtfrtdrmkrnnsnvtb.supabase.co"],
+    domains: [
+      "source.unsplash.com",
+      "pbs.twimg.com",
+      "waujtfrtdrmkrnnsnvtb.supabase.co",
+      "muse-board.pages.dev"
+    ],
   },
 };
 
