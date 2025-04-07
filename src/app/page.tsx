@@ -68,7 +68,7 @@ export default function PromptBoard() {
     setTimeout(() => {
       setEditingId(null);
       setEditedText("");
-    }, 1500); // 表示時間：1.5秒
+    }, 2000); // 表示時間：1.5秒
   };
 
   // カテゴリー一覧（重複除去）
@@ -113,7 +113,7 @@ export default function PromptBoard() {
           placeholder="プロンプトを検索..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full h-12 p-2 rounded-full mb-3 bg-gray-100 text-gray-600" 
+          className="w-full h-12 p-3 rounded-full mb-3 bg-gray-100 text-gray-600" 
           style={{ fontFamily: 'var(--font-line-seed-bd)' }}
         />
         <div className="flex flex-col gap-2">
@@ -152,7 +152,7 @@ export default function PromptBoard() {
         </div>
       </div>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-3 space-y-3">
+      <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
         {searchedPrompts.map((prompt) => (
           <div
             key={prompt.id}
